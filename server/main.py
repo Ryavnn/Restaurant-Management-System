@@ -226,6 +226,13 @@ def add_menu_item():
         }
     })
 
+# Categories route
+@app.route('/categories', methods=['GET'])
+def get_categories():
+    categories = db.session.query(MenuItem.category).distinct().all()
+    category_list = [category[0] for category in categories]
+    return jsonify({"success": True, "data": category_list})
+
 # Inventory routes
 @app.route('/inventory', methods=['GET'])
 @jwt_required()

@@ -1,19 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Cart from "../components/Pos-components/Cart";
 import CategoryBar from "../components/Pos-components/CategoryBar";
 import Menu from "../components/Pos-components/Menu";
 
 function Pos() {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [waiterName, setWaiterName] = useState("");
 
-  useEffect(() => {
-    let name = "";
-    while (!name) {
-      name = prompt("Please enter your name:");
-    }
-    setWaiterName(name);
-  }, []);
+
+
 
   return (
     <>
@@ -31,7 +25,7 @@ function Pos() {
                 <Menu selectedCategory={selectedCategory} />
               </div>
               <div className="cart">
-                <Cart waiterName={waiterName} />
+                <Cart  />
               </div>
             </div>
           </div>

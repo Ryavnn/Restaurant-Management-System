@@ -1,0 +1,116 @@
+{
+  "categories": [
+    { "name": "Pizza", "image": "pizza_category.jpg" },
+    { "name": "Burgers", "image": "burgers_category.jpg" },
+    { "name": "Salads", "image": "salads_category.jpg" },
+    { "name": "Pasta", "image": "pasta_category.jpg" },
+    { "name": "Seafood", "image": "seafood_category.jpg" }
+  ],
+  "meals": [
+    {
+      "id": 1,
+      "name": "Margherita Pizza",
+      "price": 8.99,
+      "category": "Pizza",
+      "image": "margherita_pizza.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni Pizza",
+      "price": 9.99,
+      "category": "Pizza",
+      "image": "pepperoni_pizza.jpg"
+    },
+    {
+      "id": 3,
+      "name": "BBQ Chicken Pizza",
+      "price": 11.99,
+      "category": "Pizza",
+      "image": "bbq_chicken_pizza.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Cheeseburger",
+      "price": 7.99,
+      "category": "Burgers",
+      "image": "cheeseburger.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Double Bacon Burger",
+      "price": 10.99,
+      "category": "Burgers",
+      "image": "double_bacon_burger.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Veggie Burger",
+      "price": 8.49,
+      "category": "Burgers",
+      "image": "veggie_burger.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Caesar Salad",
+      "price": 6.99,
+      "category": "Salads",
+      "image": "caesar_salad.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Greek Salad",
+      "price": 7.49,
+      "category": "Salads",
+      "image": "greek_salad.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Cobb Salad",
+      "price": 8.99,
+      "category": "Salads",
+      "image": "cobb_salad.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Spaghetti Bolognese",
+      "price": 12.99,
+      "category": "Pasta",
+      "image": "spaghetti_bolognese.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Fettuccine Alfredo",
+      "price": 11.49,
+      "category": "Pasta",
+      "image": "fettuccine_alfredo.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Penne Arrabbiata",
+      "price": 10.49,
+      "category": "Pasta",
+      "image": "penne_arrabbiata.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Grilled Salmon",
+      "price": 14.99,
+      "category": "Seafood",
+      "image": "grilled_salmon.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Fish and Chips",
+      "price": 12.49,
+      "category": "Seafood",
+      "image": "fish_and_chips.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Shrimp Scampi",
+      "price": 13.99,
+      "category": "Seafood",
+      "image": "shrimp_scampi.jpg"
+    }
+  ]
+}

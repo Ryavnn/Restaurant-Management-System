@@ -566,7 +566,7 @@ export default function RestaurantDashboard() {
           <div style={styles.statsLabel}>Menu Items</div>
           <div style={{ marginTop: "10px" }}>
             <div>
-              Average Price: ${menuItems.length > 0 ? (totalMenuValue / menuItems.length).toFixed(2) : "0.00"}
+              Average Price: Ksh{menuItems.length > 0 ? (totalMenuValue / menuItems.length).toFixed(2) : "0.00"}
             </div>
           </div>
         </div>
@@ -837,7 +837,7 @@ export default function RestaurantDashboard() {
           </select>
         </div>
         <div style={styles.formField}>
-          <label style={styles.label}>Price ($)</label>
+          <label style={styles.label}>Price (Ksh)</label>
           <input
             type="number"
             step="0.01"
@@ -891,7 +891,7 @@ export default function RestaurantDashboard() {
                 <td style={styles.td}>{item.id}</td>
                 <td style={styles.td}>{item.name}</td>
                 <td style={styles.td}>{item.category}</td>
-                <td style={styles.td}>${item.price.toFixed(2)}</td>
+                <td style={styles.td}>Ksh{item.price.toFixed(2)}</td>
                 <td style={styles.td}>{item.popularity}/100</td>
               </tr>
             ))}

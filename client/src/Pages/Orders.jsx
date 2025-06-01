@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { useOrders } from "./OrderContext";
+import Receipt from "./Receipt";
 //import { useNavigate } from "react-router-dom";
 
 function Orders() {
   const { orders, loading, error, fetchOrders, updateOrderStatus } =
     useOrders();
   const [statusFilter, setStatusFilter] = useState("");
-    const [expandedOrderId, setExpandedOrderId] = useState(null);
+  const [expandedOrderId, setExpandedOrderId] = useState(null);
+  const [selectedOrder, setSelectedOrder] = useState(null);
     
   //const navigate = useNavigate();
 
@@ -59,6 +61,10 @@ function Orders() {
 
   const toggleOrderDetails = (orderId) => {
     setExpandedOrderId(expandedOrderId === orderId ? null : orderId);
+  };
+
+  const handleViewReceipt = (order) => {
+    setSelectedOrder(order);
   };
 
   const getStatusColor = (status) => {
@@ -207,6 +213,14 @@ function Orders() {
                           nextStatusMap[order.status].slice(1)}
                       </button>
                     )}
+                    {order.status === "paid" && (
+                      <button
+                        className="view-receipt-button"
+                        onClick={() => handleViewReceipt(order)}
+                      >
+                        View Receipt
+                      </button>
+                    )}
                   </div>
                 </div>
               )}
@@ -214,6 +228,8 @@ function Orders() {
           ))}
         </div>
       )}
+
+      {selectedOrder && <Receipt order={selectedOrder} />}
 
       <style jsx>{`
         .orders-page {
@@ -372,6 +388,7 @@ function Orders() {
           display: flex;
           justify-content: flex-end;
           margin-top: 16px;
+          gap: 10px;
         }
 
         .update-status-button {
@@ -386,6 +403,20 @@ function Orders() {
 
         .update-status-button:hover {
           background-color: #3d8b40;
+        }
+
+        .view-receipt-button {
+          background-color: #2196f3;
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+        }
+
+        .view-receipt-button:hover {
+          background-color: #0d8bf2;
         }
 
         .orders-loading,

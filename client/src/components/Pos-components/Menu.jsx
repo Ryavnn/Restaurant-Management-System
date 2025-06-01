@@ -63,7 +63,7 @@ function Menu({ selectedCategory }) {
             </div>
             <div className="menu-text">
               <p className="food-name">{meal.name}</p>
-              <p className="food-price">${meal.price}</p>
+              <p className="food-price">Ksh{meal.price}</p>
             </div>
           </div>
         ))

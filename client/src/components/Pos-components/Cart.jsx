@@ -195,13 +195,13 @@ function Cart() {
                       {quantity[index] || 1} x {meal.name}
                     </span>
                     <span>
-                      ${(meal.price * (quantity[index] || 1)).toFixed(2)}
+                      ksh{(meal.price * (quantity[index] || 1)).toFixed(2)}
                     </span>
                   </div>
                 ))}
               </div>
               <div className="order-total-summary">
-                <strong>Total:</strong> <strong>${calculateTotal()}</strong>
+                <strong>Total:</strong> <strong>Ksh{calculateTotal()}</strong>
               </div>
             </div>
 

@@ -292,14 +292,15 @@ export default function RestaurantDashboard() {
       display: "flex",
       flexDirection: "column",
       height: "100vh",
-      fontFamily: "Arial, sans-serif",
-      color: "#333",
+      fontFamily: "Segoe UI, Arial, sans-serif",
+      color: "#222",
+      background: "linear-gradient(135deg, #f8f9fa 60%, #e3e6f3 100%)",
     },
     header: {
       padding: "20px",
-      backgroundColor: "#ff6b6b",
+      background: "linear-gradient(90deg, #2563eb 80%, #4f8cff 100%)",
       color: "white",
-      boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+      boxShadow: "0 2px 8px rgba(79,140,255,0.10)",
     },
     content: {
       display: "flex",
@@ -308,22 +309,27 @@ export default function RestaurantDashboard() {
     },
     sidebar: {
       width: "220px",
-      backgroundColor: "#f8f9fa",
-      borderRight: "1px solid #e9ecef",
+      background: "#f4f6fb",
+      borderRight: "1.5px solid #e3e6f3",
       padding: "20px 0",
+      boxShadow: "2px 0 8px rgba(79,140,255,0.04)",
     },
     sidebarItem: {
       display: "flex",
       alignItems: "center",
       padding: "12px 20px",
       cursor: "pointer",
-      transition: "background-color 0.2s",
-      color: "#495057",
+      transition: "background 0.18s, color 0.18s",
+      color: "#2563eb",
+      borderRadius: "0.7rem",
+      margin: "0 10px 10px 10px",
+      fontWeight: 500,
     },
     sidebarItemActive: {
-      backgroundColor: "#ff6b6b",
-      color: "white",
+      background: "linear-gradient(90deg, #2563eb 70%, #4f8cff 100%)",
+      color: "#fff",
       fontWeight: "bold",
+      boxShadow: "0 4px 16px rgba(79,140,255,0.13)",
     },
     sidebarIcon: {
       marginRight: "10px",
@@ -332,7 +338,10 @@ export default function RestaurantDashboard() {
       flex: 1,
       padding: "30px",
       overflowY: "auto",
-      backgroundColor: "#fff",
+      background: "#fff",
+      borderRadius: "0 1rem 1rem 0",
+      boxShadow: "0 8px 24px rgba(0,0,0,0.12), 0 1.5px 6px rgba(0,0,0,0.08)",
+      margin: "1.5rem 1.5rem 1.5rem 0",
     },
     dashboardGrid: {
       display: "grid",
@@ -341,54 +350,66 @@ export default function RestaurantDashboard() {
       marginBottom: "30px",
     },
     card: {
-      backgroundColor: "white",
-      borderRadius: "8px",
-      boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+      background: "#f9fafd",
+      borderRadius: "1rem",
+      boxShadow: "0 2px 12px rgba(79,140,255,0.07)",
       padding: "20px",
+      border: "1.5px solid #e3e6f3",
     },
     cardHeader: {
       marginTop: 0,
       fontWeight: "bold",
-      color: "#333",
-      borderBottom: "1px solid #eee",
+      color: "#2563eb",
+      borderBottom: "1px solid #e3e6f3",
       paddingBottom: "10px",
       marginBottom: "15px",
     },
     statsNumber: {
       fontSize: "32px",
       fontWeight: "bold",
-      color: "#ff6b6b",
+      color: "#2563eb",
       marginBottom: "8px",
     },
     statsLabel: {
-      color: "#6c757d",
+      color: "#4f8cff",
       fontSize: "14px",
     },
     chartContainer: {
       height: "300px",
       marginBottom: "30px",
+      background: "#f4f6fb",
+      borderRadius: "1rem",
+      padding: "20px",
+      boxShadow: "0 2px 12px rgba(79,140,255,0.07)",
+      border: "1.5px solid #e3e6f3",
     },
     table: {
       width: "100%",
       borderCollapse: "collapse",
       marginBottom: "30px",
+      background: "#fff",
+      borderRadius: "0.7rem",
+      overflow: "hidden",
+      boxShadow: "0 2px 8px rgba(79,140,255,0.06)",
     },
     th: {
       textAlign: "left",
       padding: "12px",
-      backgroundColor: "#f8f9fa",
-      borderBottom: "2px solid #dee2e6",
+      background: "#f4f6fb",
+      borderBottom: "2px solid #e3e6f3",
+      color: "#2563eb",
     },
     td: {
       padding: "12px",
-      borderBottom: "1px solid #dee2e6",
+      borderBottom: "1px solid #e3e6f3",
     },
     form: {
-      backgroundColor: "white",
-      borderRadius: "8px",
-      boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+      background: "#f9fafd",
+      borderRadius: "1rem",
+      boxShadow: "0 2px 12px rgba(79,140,255,0.07)",
       padding: "20px",
       marginBottom: "30px",
+      border: "1.5px solid #e3e6f3",
     },
     formField: {
       marginBottom: "15px",
@@ -397,59 +418,69 @@ export default function RestaurantDashboard() {
       display: "block",
       marginBottom: "5px",
       fontWeight: "bold",
+      color: "#2563eb",
     },
     input: {
       width: "100%",
       padding: "10px",
-      border: "1px solid #ddd",
-      borderRadius: "4px",
+      border: "1.5px solid #bfc9d9",
+      borderRadius: "0.7rem",
       fontSize: "16px",
+      background: "#fff",
+      color: "#222",
     },
     select: {
       width: "100%",
       padding: "10px",
-      border: "1px solid #ddd",
-      borderRadius: "4px",
+      border: "1.5px solid #bfc9d9",
+      borderRadius: "0.7rem",
       fontSize: "16px",
-      backgroundColor: "white",
+      background: "#fff",
+      color: "#222",
     },
     button: {
-      backgroundColor: "#ff6b6b",
+      background: "linear-gradient(90deg, #2563eb 70%, #4f8cff 100%)",
       color: "white",
       border: "none",
-      borderRadius: "4px",
+      borderRadius: "0.7rem",
       padding: "12px 20px",
       fontSize: "16px",
       cursor: "pointer",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      fontWeight: 600,
+      boxShadow: "0 2px 8px rgba(79,140,255,0.08)",
+      transition: "background 0.18s",
     },
     buttonIcon: {
       marginRight: "8px",
     },
     alert: {
       padding: "12px",
-      borderRadius: "4px",
-      backgroundColor: "#f8d7da",
-      color: "#721c24",
+      borderRadius: "0.7rem",
+      background: "#f0f6ff",
+      color: "#2563eb",
       marginBottom: "20px",
       display: "flex",
       alignItems: "center",
+      border: "1.5px solid #4f8cff",
+      fontWeight: 500,
     },
     loginContainer: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       height: "100vh",
-      backgroundColor: "#f8f9fa",
+      background: "linear-gradient(135deg, #f8f9fa 60%, #e3e6f3 100%)",
     },
     loginCard: {
       width: "400px",
       padding: "30px",
-      backgroundColor: "white",
-      borderRadius: "8px",
-      boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+      background: "#fff",
+      borderRadius: "1rem",
+      boxShadow: "0 4px 10px rgba(79,140,255,0.10)",
+      border: "1.5px solid #e3e6f3",
     },
     loadingOverlay: {
       position: "fixed",
@@ -457,11 +488,14 @@ export default function RestaurantDashboard() {
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: "rgba(255,255,255,0.8)",
+      background: "rgba(244,246,251,0.85)",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       zIndex: 1000,
+      color: "#2563eb",
+      fontSize: "1.5rem",
+      fontWeight: 600,
     },
   };
 
@@ -566,7 +600,10 @@ export default function RestaurantDashboard() {
           <div style={styles.statsLabel}>Menu Items</div>
           <div style={{ marginTop: "10px" }}>
             <div>
-              Average Price: Ksh{menuItems.length > 0 ? (totalMenuValue / menuItems.length).toFixed(2) : "0.00"}
+              Average Price: Ksh
+              {menuItems.length > 0
+                ? (totalMenuValue / menuItems.length).toFixed(2)
+                : "0.00"}
             </div>
           </div>
         </div>
@@ -604,7 +641,7 @@ export default function RestaurantDashboard() {
                 cx="50%"
                 cy="50%"
                 outerRadius={100}
-                fill="#ff6b6b"
+                fill="#2563eb"
                 dataKey="value"
                 label={({ name, percent }) =>
                   `${name}: ${(percent * 100).toFixed(0)}%`
@@ -633,7 +670,11 @@ export default function RestaurantDashboard() {
               />
               <Tooltip />
               <Legend />
-              <Bar dataKey="popularity" fill="#ff9f43" name="Popularity Score" />
+              <Bar
+                dataKey="popularity"
+                fill="#2563eb"
+                name="Popularity Score"
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -669,7 +710,7 @@ export default function RestaurantDashboard() {
 
       {error && (
         <div style={styles.alert}>
-              <AlertCircle size={20} style={{ marginRight: "10px" }} />
+          <AlertCircle size={20} style={{ marginRight: "10px" }} />
           {error}
         </div>
       )}
@@ -785,7 +826,7 @@ export default function RestaurantDashboard() {
               <Legend />
               <Bar
                 dataKey="performance"
-                fill="#ff6b6b"
+                fill="#2563eb"
                 name="Performance Score"
               />
             </BarChart>

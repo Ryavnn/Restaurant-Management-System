@@ -66,7 +66,7 @@ export default function LoginPage() {
     },
     leftPanel: {
       flex: "1",
-      backgroundColor: "#ff6b6b",
+      background: "linear-gradient(135deg, #2563eb 70%, #4f8cff 100%)",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -151,14 +151,16 @@ export default function LoginPage() {
     button: {
       width: "100%",
       padding: "12px",
-      backgroundColor: "#ff6b6b",
+      background: "linear-gradient(90deg, #2563eb 70%, #4f8cff 100%)",
       color: "white",
       border: "none",
-      borderRadius: "4px",
+      borderRadius: "0.7rem",
       fontSize: "1rem",
       fontWeight: "bold",
       cursor: "pointer",
       marginTop: "1rem",
+      boxShadow: "0 2px 8px rgba(79,140,255,0.08)",
+      transition: "background 0.18s",
     },
     error: {
       color: "#e74c3c",
@@ -170,9 +172,11 @@ export default function LoginPage() {
       marginTop: "0.5rem",
     },
     forgotPasswordLink: {
-      color: "#ff6b6b",
+      color: "#2563eb",
       textDecoration: "none",
       fontSize: "0.9rem",
+      fontWeight: 500,
+      transition: "color 0.18s",
     },
     demoCredentials: {
       marginTop: "2rem",

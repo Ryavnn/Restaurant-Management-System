@@ -195,7 +195,7 @@ function Cart() {
                       {quantity[index] || 1} x {meal.name}
                     </span>
                     <span>
-                      ksh{(meal.price * (quantity[index] || 1)).toFixed(2)}
+                      ${(meal.price * (quantity[index] || 1)).toFixed(2)}
                     </span>
                   </div>
                 ))}

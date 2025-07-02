@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useCart } from "../../CartContext";
 
-function Menu({ selectedCategory }) {
+function Menu({ selectedCategory, searchTerm = "" }) {
   const [meals, setMeals] = useState([]);
   const { addToCart } = useCart();
   const [loading, setLoading] = useState(true);
@@ -31,10 +31,12 @@ function Menu({ selectedCategory }) {
       });
   }, []);
 
-  // Filter meals based on the selected category
-  const filteredMeals = selectedCategory
-    ? meals.filter((meal) => meal.category === selectedCategory)
-    : meals;
+  // Filter meals based on the selected category and search term
+  const filteredMeals = meals.filter((meal) => {
+    const matchesCategory = selectedCategory ? meal.category === selectedCategory : true;
+    const matchesSearch = meal.name.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   if (loading) return <p>Loading menu items...</p>;
   if (error) return <p>Error loading menu: {error}</p>;
@@ -49,21 +51,18 @@ function Menu({ selectedCategory }) {
             onClick={() => addToCart(meal)}
           >
             <div className="menu-image">
-              {meal.image ? (
-                <img
-                  src="https://img.freepik.com/free-photo/vegetables-salad-table_23-2148515515.jpg?semt=ais_hybrid&w=740"
-                  alt={`${meal.name} image`}
-                />
-              ) : (
-                <img
-                  src="https://img.freepik.com/free-photo/vegetables-salad-table_23-2148515515.jpg?semt=ais_hybrid&w=740"
-                  alt={`${meal.name} image`}
-                />
-              )}
+              <img
+                src={
+                  meal.image && meal.image !== ""
+                    ? meal.image
+                    : "https://img.freepik.com/free-photo/vegetables-salad-table_23-2148515515.jpg?semt=ais_hybrid&w=740"
+                }
+                alt={`${meal.name} image`}
+              />
             </div>
             <div className="menu-text">
               <p className="food-name">{meal.name}</p>
-              <p className="food-price">Ksh{meal.price}</p>
+              <p className="food-price">${meal.price}</p>
             </div>
           </div>
         ))

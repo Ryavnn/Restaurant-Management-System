@@ -63,13 +63,16 @@ function Cart() {
       setIsSubmitting(true);
       setErrorMessage("");
 
-      const response = await fetch("http://127.0.0.1:5000/orders", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(orderDetails),
-      });
+      const response = await fetch(
+        "https://restaurant-management-system-o16r.onrender.com/orders",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(orderDetails),
+        }
+      );
 
       const data = await response.json();
 

@@ -88,7 +88,9 @@ export function OrderProvider({ children }) {
   const getOrderById = async (orderId) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://127.0.0.1:5000/orders/${orderId}`);
+      const response = await fetch(
+        `https://restaurant-management-system-o16r.onrender.com/orders/${orderId}`
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

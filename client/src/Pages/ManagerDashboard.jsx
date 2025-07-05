@@ -55,7 +55,7 @@ export default function RestaurantDashboard() {
   });
 
   // API base URL
-  const API_URL = "http://127.0.0.1:5000";
+  const API_URL = "https://restaurant-management-system-o16r.onrender.com";
 
   // Fetch data on component mount
   useEffect(() => {

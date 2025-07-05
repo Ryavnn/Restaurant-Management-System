@@ -18,13 +18,16 @@ export default function LoginPage() {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(loginForm),
-      });
+      const res = await fetch(
+        "https://restaurant-management-system-o16r.onrender.com/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loginForm),
+        }
+      );
 
       const data = await res.json();
 

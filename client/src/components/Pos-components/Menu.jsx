@@ -9,7 +9,7 @@ function Menu({ selectedCategory, searchTerm = "" }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://127.0.0.1:5000/menu")
+    fetch("https://restaurant-management-system-o16r.onrender.com/menu")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch menu items");

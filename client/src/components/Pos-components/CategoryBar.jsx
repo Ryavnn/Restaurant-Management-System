@@ -7,7 +7,7 @@ function CategoryBar({ onCategorySelect }) {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:5000/categories")
+    fetch("https://restaurant-management-system-o16r.onrender.com/categories")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
